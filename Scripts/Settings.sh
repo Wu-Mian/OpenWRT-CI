@@ -28,8 +28,13 @@ fi
 
 #高通平台锁定512M内存
 if [[ $WRT_TARGET == *"IPQ"* ]]; then
-	echo "CONFIG_IPQ_MEM_PROFILE_1024=n" >> ./.config
-	echo "CONFIG_IPQ_MEM_PROFILE_512=y" >> ./.config
-	echo "CONFIG_ATH11K_MEM_PROFILE_1G=n" >> ./.config
-	echo "CONFIG_ATH11K_MEM_PROFILE_512M=y" >> ./.config
+	#echo "CONFIG_IPQ_MEM_PROFILE_1024=n" >> ./.config
+	#echo "CONFIG_IPQ_MEM_PROFILE_512=y" >> ./.config
+	#echo "CONFIG_ATH11K_MEM_PROFILE_1G=n" >> ./.config
+	#echo "CONFIG_ATH11K_MEM_PROFILE_512M=y" >> ./.config
+ #高通平台调整
+ 	#取消nss相关feed
+	echo "CONFIG_FEED_nss_packages=n" >> ./.config
+	echo "CONFIG_FEED_sqm_scripts_nss=n" >> ./.config
 fi
+
