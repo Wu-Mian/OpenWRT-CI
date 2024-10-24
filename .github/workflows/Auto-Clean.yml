@@ -24,8 +24,8 @@ jobs:
       - name: Delete Old Releases
         uses: dev-drprasad/delete-older-releases@master
         with:
-          keep_latest: ${{inputs.NUMBER || '0'}}
-          delete_tags: true
+          keep_latest: ${{inputs.NUMBER || '5'}}
+          delete_tags: false
 
       - name: Delete Old Workflows
         uses: Mattraks/delete-workflow-runs@main
